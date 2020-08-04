@@ -457,6 +457,10 @@ main {
             text-align: center;
           }
         }
+
+        @include mobile {
+          font-size: 38px;
+        }
       }
 
       #arrows {
@@ -498,6 +502,19 @@ main {
         @include mobile {
           top: 110px;
           left: calc( 50% - 39px );
+        }
+      }
+
+      .mobView {
+        display: none;
+      }
+
+      @include mobile { 
+        .mobView {
+          display: block;
+        }
+        .largeView {
+          display: none;
         }
       }
 

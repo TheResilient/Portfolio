@@ -154,8 +154,15 @@ const activeDot = (time, active) => {
 
 const sliderPrj = (arrows) => {
 
+    if (!isDevice()) {
+        removeHtml("#projects h3.mobView");
+    } else {
+        removeHtml("#projects h3.largeView");
+    }
+
     let index = 0;
     let prj = document.querySelectorAll("#projects h3");
+
     let prev = arrows[0];
     let next = arrows[1];
 
@@ -193,6 +200,12 @@ const sliderPrj = (arrows) => {
 const removeClasses = (elem, className) => {
     elem.forEach(function (el, index) {
         elem[index].classList.remove(className);
+    });
+}
+
+const removeHtml = (className) => {
+    document.querySelectorAll(className).forEach(function (el, index) {
+        el.remove();
     });
 }
 
