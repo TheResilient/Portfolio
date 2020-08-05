@@ -621,11 +621,6 @@ main {
     opacity: 0;
     transform: scale(0.2);
     z-index: 20;
-    cursor: crosshair;
-
-    &#matrix {
-      display: normal;
-    }
 
     .alaDxFly {
       fill: #666666;
