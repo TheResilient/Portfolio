@@ -22,7 +22,7 @@ const scrollAnim = () => {
     const sceneHeight = Math.round(sectHeight / 6);
 
     controller.scrollTo(function (time, newpos) {
-        TweenMax.to(window, time, { scrollTo: { y: newpos }, ease: Linear.easeNone });
+        TweenMax.to(document.documentElement, time, { scrollTo: { y: newpos }, ease: Linear.easeNone });
     });
 
     let firstMorning = TweenMax.to(".morning.fLeft span", 1, { marginLeft: 0, opacity: 1 });
