@@ -1,9 +1,10 @@
-import { TweenMax, Linear, TimelineMax } from 'gsap/all';
-import ScrollToPlugin from "gsap/umd/ScrollToPlugin";
+import { TweenMax, ScrollToPlugin, Linear, TimelineMax } from 'gsap/all';
 import ScrollMagic from 'scrollmagic';
 import Swiper from 'swiper';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+
+console.log(ScrollToPlugin);
 
 let slfBlacks; //-- Logo black levels svg 
 let stateScene; //-- Scenes of each state
@@ -22,7 +23,7 @@ const scrollAnim = () => {
     const sceneHeight = Math.round(sectHeight / 6);
 
     controller.scrollTo(function (time, newpos) {
-        TweenMax.to(document.documentElement, time, { scrollTo: { y: newpos }, ease: Linear.easeNone });
+        TweenMax.to(window, time, { scrollTo: { y: newpos }, ease: Linear.easeNone });
     });
 
     let firstMorning = TweenMax.to(".morning.fLeft span", 1, { marginLeft: 0, opacity: 1 });

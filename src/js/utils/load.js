@@ -225,6 +225,8 @@ window.addEventListener('scroll', noScroll);
 
 const afterLoad = () => {
 
+  console.clear();
+
   if (!utils.isDevice()) {
 
     let introTl = new TimelineMax({
