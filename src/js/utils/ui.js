@@ -1,4 +1,5 @@
-import { TweenMax, ScrollToPlugin, Linear, TimelineMax } from 'gsap/all';
+import { TweenMax, Linear, TimelineMax } from 'gsap/all';
+import ScrollToPlugin from "gsap/umd/ScrollToPlugin";
 import ScrollMagic from 'scrollmagic';
 import Swiper from 'swiper';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
