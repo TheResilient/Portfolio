@@ -3,6 +3,9 @@ import * as utils from "./scene";
 import { stateScene } from "./ui";
 import * as dat from 'dat.gui';
 
+
+
+
 /* #region VARIABLES */
 
 const loader = new GLTFLoader(utils.loadScene);
