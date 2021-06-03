@@ -20,27 +20,8 @@
 <body>
 
     <main>
-        <!-- <embed src="/assets/audio/i.mp3" loop="true" autostart="true" width="2" height="0"> -->
-        <script>
-            window.addEventListener('load', function () {
-                var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                var source = audioCtx.createBufferSource();
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '/assets/audio/i.mp3');
-                xhr.responseType = 'arraybuffer';
-                xhr.addEventListener('load', function (r) {
-                    audioCtx.decodeAudioData(
-                        xhr.response,
-                        function (buffer) {
-                            source.buffer = buffer;
-                            source.connect(audioCtx.destination);
-                            source.loop = false;
-                        });
-                    source.start(0);
-                });
-                xhr.send();
-            });
-        </script>
+        <embed src="/assets/audio/i.mp3" loop="true" autostart="true" width="2" height="0">
+        
         <svg id=matrix class=littleFella xmlns=http://www.w3.org/2000/svg viewBox="0 0 260 240">
             <g>
                 <path class=alaSxFly
@@ -138,6 +119,7 @@
         </section>
     </main>
     <script type="text/javascript" src="assets/main.js?326ce551e489d5dcea68"></script>
+    
 </body>
 
 </html>
